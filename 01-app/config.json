@@ -1,0 +1,122 @@
+{
+ "companies": [
+  {
+   "name": "Anthropic",
+   "query": "Anthropic OR Claude AI",
+   "must": [
+    "anthropic",
+    "claude"
+   ]
+  },
+  {
+   "name": "Apple",
+   "query": "Apple iPhone OR Apple Siri OR Apple Inc",
+   "must": [
+    "apple"
+   ]
+  },
+  {
+   "name": "OpenAI",
+   "query": "OpenAI OR ChatGPT OR Sam Altman",
+   "must": [
+    "openai",
+    "chatgpt",
+    "altman"
+   ]
+  },
+  {
+   "name": "Google",
+   "query": "Google OR Alphabet Gemini OR DeepMind",
+   "must": [
+    "google",
+    "alphabet",
+    "gemini",
+    "deepmind"
+   ]
+  },
+  {
+   "name": "Microsoft",
+   "query": "Microsoft Azure OR Microsoft Copilot OR Microsoft Windows",
+   "must": [
+    "microsoft"
+   ]
+  },
+  {
+   "name": "Nvidia",
+   "query": "Nvidia",
+   "must": [
+    "nvidia"
+   ]
+  },
+  {
+   "name": "Meta",
+   "query": "Meta Platforms OR Zuckerberg OR Instagram OR WhatsApp",
+   "must": [
+    "meta platforms",
+    "zuckerberg",
+    "instagram",
+    "whatsapp",
+    "facebook",
+    "meta ai",
+    "meta's",
+    "meta to",
+    "meta is"
+   ]
+  },
+  {
+   "name": "Amazon",
+   "query": "Amazon AWS OR Amazon Bezos OR Amazon Jassy",
+   "must": [
+    "amazon",
+    "aws",
+    "bezos",
+    "jassy"
+   ]
+  },
+  {
+   "name": "Tesla",
+   "query": "Tesla Musk OR Tesla Autopilot OR Tesla Robotaxi",
+   "must": [
+    "tesla"
+   ]
+  }
+ ],
+ "block_words": [
+  "review",
+  "deal of",
+  "deals",
+  "% off",
+  "patio",
+  "on sale",
+  "best buy",
+  "horoscope",
+  "stock buy",
+  "better buy",
+  "price target",
+  "latest press releases",
+  "weekly roundup",
+  "stock reports"
+ ],
+ "editions": [
+  [
+   "en-US",
+   "US",
+   "US:en"
+  ],
+  [
+   "en-GB",
+   "GB",
+   "GB:en"
+  ],
+  [
+   "en-HK",
+   "HK",
+   "HK:en"
+  ]
+ ],
+ "stories_per_company": 3,
+ "max_age_hours": 48,
+ "refresh_page_seconds": 300,
+ "refresh_minutes": 30,
+ "port": 8765
+}

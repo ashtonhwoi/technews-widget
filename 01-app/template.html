@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="{{REFRESH}}">
+<title>Tech News</title>
+<style>
+:root{--bg:#f6f6f4;--card:#fff;--text:#1c1c1a;--mute:#6b6b66;--accent:#c4501d;--line:#e4e4df}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--card:#1f1f1d;--text:#ecece8;--mute:#9a9a93;--accent:#ee8a5a;--line:#2e2e2b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif}
+header{position:sticky;top:0;background:var(--bg);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;z-index:1}
+header h1{font-size:15px;margin:0;flex:1}
+.upd{font-size:11px;color:var(--mute)}
+.stale{font-size:11px;color:var(--accent);margin-left:6px}
+button{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:6px;padding:4px 10px;cursor:pointer}
+main{padding:6px 14px 20px}
+h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:18px 0 6px}
+article{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 11px;margin-bottom:7px}
+.sum{margin:0 0 5px}
+article a{font-size:12px;color:var(--mute);text-decoration:none}
+article a:hover{text-decoration:underline}
+.age{font-size:12px;color:var(--mute)}
+.none{color:var(--mute);font-size:13px;margin:0}
+</style></head><body>
+<header><h1>Tech News</h1><span class="upd">Updated {{UPDATED}}</span>{{STALE}}<button id="rf" onclick="rf()">Refresh</button></header>
+<main>
+{{BODY}}
+</main>
+<script>
+async function rf(){const b=document.getElementById('rf');b.disabled=true;b.textContent='Fetching…';
+try{await fetch('/refresh',{method:'POST'})}catch(e){}
+location.reload()}
+</script></body></html>
